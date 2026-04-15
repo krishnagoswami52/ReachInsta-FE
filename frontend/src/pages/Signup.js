@@ -132,8 +132,9 @@ export default function Signup() {
               checked={agreed}
               onCheckedChange={setAgreed}
               data-testid="terms-checkbox"
+              className="mt-1"
             />
-            <label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed">
+            <label htmlFor="terms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
               I agree to the{' '}
               <Link to="/terms" className="text-[#FF4500] hover:underline">
                 Terms of Service

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Marquee from 'react-fast-marquee';
 import {
   Users, TrendingUp, BarChart3, Clock, Download, Sparkles, Upload, Target,
-  Shield, Lock, Globe, XCircle, ChevronRight, Play, Star
+  Shield, Lock, Globe, XCircle, ChevronRight, Play
 } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import DashboardMockup from '../components/DashboardMockup';
@@ -24,27 +24,6 @@ const steps = [
   { num: '02', title: 'Add Competitors', desc: 'Import usernames manually or via CSV' },
   { num: '03', title: 'Fetch Analytics', desc: 'Get instant insights on their best content' },
   { num: '04', title: 'Grow Faster', desc: 'Apply learnings to your content strategy' },
-];
-
-const testimonials = [
-  {
-    quote: "Saved me hours every week. My reels now consistently perform better.",
-    author: 'Creator',
-    role: '45K Followers',
-    image: 'https://images.pexels.com/photos/30496625/pexels-photo-30496625.jpeg',
-  },
-  {
-    quote: "We use ReachInsta for clients. Massive time saver.",
-    author: 'Agency Owner',
-    role: 'Marketing Agency',
-    image: 'https://images.pexels.com/photos/11302135/pexels-photo-11302135.jpeg',
-  },
-  {
-    quote: "The viral reel finder alone is worth it.",
-    author: 'Gaming Creator',
-    role: '120K Followers',
-    image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg',
-  },
 ];
 
 const trustBadges = [
@@ -284,68 +263,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 lg:py-32" data-testid="testimonials-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="text-center mb-16"
-          >
-            <motion.span
-              variants={fadeInUp}
-              className="text-[#FF4500] text-sm font-medium uppercase tracking-wider"
-            >
-              Testimonials
-            </motion.span>
-            <motion.h2
-              variants={fadeInUp}
-              className="font-outfit text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mt-4"
-            >
-              Loved by Creators
-            </motion.h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="p-8 rounded-xl bg-surface border border-border"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#FF4500] text-[#FF4500]" />
-                  ))}
-                </div>
-                <p className="text-lg mb-6 leading-relaxed">"{testimonial.quote}"</p>
-                <div className="flex items-center gap-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="font-semibold">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 lg:py-32 bg-surface" data-testid="cta-section">
+      <section className="py-20 lg:py-32" data-testid="cta-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial="hidden"

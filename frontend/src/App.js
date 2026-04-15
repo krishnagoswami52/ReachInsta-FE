@@ -21,7 +21,7 @@ function App() {
       <div className="App min-h-screen bg-background text-foreground">
         <BrowserRouter>
           <Navbar />
-          <main>
+          <main className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/features" element={<Features />} />

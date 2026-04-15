@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "name": "ReachInsta",
+    "domain": "SaaS / Creator Economy",
+    "theme": "dark",
+    "archetype": "Archetype 4 (Swiss & High-Contrast)",
+    "description": "Premium modern SaaS landing website for competitor intelligence. Linear/Framer aesthetic. Production-ready, polished, trust-building."
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit",
+      "weights": ["400", "600", "700"],
+      "tracking": "tight"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["400", "500"]
+    },
+    "rules": [
+      "No Inter for headings.",
+      "Headings must use tight letter spacing (tracking-tight).",
+      "Line height: tight (leading-none or leading-tight) for headers, loose (leading-relaxed) for body.",
+      "Scale: Fluid typography, max text-6xl for Hero."
+    ]
+  },
+  "colors": {
+    "rules": [
+      "Follow 60-30-10 rule: 60% greyscale background/surface, 30% text/borders, 10% distinct accent color (#FF4500).",
+      "Never use pure transparent backgrounds over content without blur.",
+      "Hover state: button background must switch to a lighter hue or high-contrast state."
+    ],
+    "dark_mode": {
+      "background": "#050505",
+      "surface": "#121212",
+      "surface_elevated": "#1A1A1A",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#A3A3A3",
+      "accent_cta": "#FF4500",
+      "accent_cta_hover": "#FF6347"
+    },
+    "light_mode": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "surface_elevated": "#F5F5F5",
+      "border": "rgba(0, 0, 0, 0.1)",
+      "text_primary": "#050505",
+      "text_secondary": "#525252",
+      "accent_cta": "#FF4500",
+      "accent_cta_hover": "#E03E00"
+    }
+  },
+  "layout_and_spacing": {
+    "grid": "Bento Grid Protocol. Use 'Control Room' mode for Dashboard mockups and 'Tetris' grid for Marketing Feature blocks.",
+    "spacing_scale": "Tailwind standard but generous. Use p-8, p-12, gap-8, gap-12 to create breathing room.",
+    "rules": [
+      "Containers with borders must have internal padding (e.g., p-6 or p-8).",
+      "Asymmetry creates tension. Avoid perfect center alignment for everything. Left-align dense text.",
+      "Mobile-first responsive grids."
+    ]
+  },
+  "components": {
+    "buttons": "Shadcn based. Primary CTAs must use the accent_cta color. Use capsule (rounded-full) for hero CTAs for a sleek modern look. Must have focus/ring states.",
+    "cards": "1px subtle border, flat background or crystal glassmorphism (backdrop-blur-xl bg-black/60). Avoid heavy drop shadows in dark mode, use inner glow/border instead.",
+    "navigation": "Sticky, glassmorphism background (backdrop-blur-xl), clear logo, CTA, and links. z-50.",
+    "dashboard_mockup": "Do not use a static image. Build a realistic dashboard UI preview combining Tailwind, Recharts, and framer-motion. Animate the charts/stats appearing.",
+    "icons": "lucide-react. Standardize stroke-width to 1.5.",
+    "trust_badges": "Implement an infinite marquee (react-fast-marquee or framer-motion) using lucide-react brand icons (e.g., Instagram, Youtube, Twitch, Twitter, Figma). Do NOT use placeholder text or dummy image URLs."
+  },
+  "media": {
+    "images": {
+      "hero_background": {
+        "url": "https://images.pexels.com/photos/31650443/pexels-photo-31650443.jpeg",
+        "description": "Elegant abstract black satin texture for deep premium dark mode hero background section. Overlay with bg-black/60."
+      },
+      "testimonials": [
+        {
+          "url": "https://images.pexels.com/photos/30496625/pexels-photo-30496625.jpeg",
+          "description": "Professional man in suit (User 1)"
+        },
+        {
+          "url": "https://images.pexels.com/photos/11302135/pexels-photo-11302135.jpeg",
+          "description": "Professional woman in blue suit (User 2)"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1762522921456-cdfe882d36c3",
+          "description": "Creative director blonde woman (User 3)"
+        }
+      ]
+    },
+    "rules": [
+      "Never use placeholder URLs.",
+      "Always apply object-cover for images.",
+      "Max overlay opacity bg-black/50, unless you need pure text readability, then max bg-black/70."
+    ]
+  },
+  "pages_required": [
+    "Home", "Features", "Pricing", "About", "Contact", "Terms of Service", "Privacy Policy", "Refund Policy", "FAQ", "Login UI", "Signup UI"
+  ],
+  "accessibility": {
+    "contrast": "Ensure 4.5:1 ratio for normal text. Use text-shadow over images if contrast fails.",
+    "testing": "All interactive elements and form inputs MUST have data-testid attributes."
+  },
+  "instructions_to_main_agent": [
+    "Execute `yarn add framer-motion next-themes react-fast-marquee` as they are needed for the animations, theming, and trust badges.",
+    "Initialize the app in dark mode as default using next-themes.",
+    "Implement the UI using React, Tailwind CSS, and Framer Motion.",
+    "Build the dashboard mockup using Recharts and Tailwind (do not use a static image). Animate the data entering.",
+    "Use lucide-react for all iconography. Use lucide icons for Trust Badges instead of placeholder images.",
+    "Integrate Shadcn components: Accordion (FAQ), Cards (Features/Pricing), Forms (Contact/Auth/Login/Signup).",
+    "Ensure complete responsive design (mobile hamburger menu, stacked grids on mobile).",
+    "Implement the dark/light mode toggle in the navigation bar."
+  ]
+}
